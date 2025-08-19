@@ -1,2 +1,2 @@
-epicsEnvSet("IOC_TOP", "/c/Users/clatimer/Desktop/lcls-plc-hxr-vhs/iocBoot/ioc-plc-vhs-01")
+epicsEnvSet("IOC_TOP", "/c/Users/ctsoi/Desktop/lcls-plc-hxr-vhs/iocBoot/ioc-plc-vhs-01")
 epicsEnvSet("IOC_DATA", "/cds/data/iocData")

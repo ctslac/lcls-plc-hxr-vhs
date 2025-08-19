@@ -27,7 +27,7 @@ VAR
                               .bLimitBackwardEnable := TIIB[EL7031_00_02]^STM Status^Status^Digital input 2'}
     M1: ST_MotionStage := (sName := 'HXR:VHS:MMS:CR');
 
-       // Axis 2 - CR1 Move
+    // Axis 2 - CR1 Move
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM1'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3;
                               .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4'}

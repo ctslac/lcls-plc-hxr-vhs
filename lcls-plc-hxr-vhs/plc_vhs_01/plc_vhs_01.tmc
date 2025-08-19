@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance2" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{E0D5E45B-E9BE-57FC-AF02-302957576934}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance2" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{BC5A44D8-6DE3-EBFE-2811-6F78C8796353}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_System">T_AmsNetID</Name>
@@ -68052,7 +68052,7 @@ External Setpoint Generation:
     </DataType>
   </DataTypes>
   <Modules>
-    <Module GUID="{A1DCFD61-2C13-4209-9B3D-0B79773D1D53}" TcSmClass="TComPlcObjDef" TargetPlatform="TwinCAT RT (x64)">
+    <Module GUID="{A1DCFD61-2C13-4209-9B3D-0B79773D1D53}" TcSmClass="TComPlcObjDef" TargetPlatform="TwinCAT OS (x64)">
       <Name>plc_vhs_01</Name>
       <CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
       <Licenses/>
@@ -76946,7 +76946,7 @@ External Setpoint Generation:
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-08-18T17:02:16</Value>
+          <Value>2025-08-19T09:54:04</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

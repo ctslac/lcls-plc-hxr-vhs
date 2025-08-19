@@ -63,6 +63,12 @@
 				<Link VarA="PlcTask Inputs^Main.M14.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 11" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 14" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 13" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 2" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M9.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 1" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7031_00_02">
+				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M1 - CR">
 				<Link VarA="PlcTask Inputs^Main.M1.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
