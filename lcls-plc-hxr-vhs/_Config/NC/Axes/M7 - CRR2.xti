@@ -1429,6 +1429,7 @@ External Setpoint Generation:
 		<AxisPara>
 			<Dynamic AccelerationMaximum="20" DecelerationMaximum="20" Acceleration="20" Deceleration="20" Jerk="200"/>
 			<Velo RefSearch="0.04" RefSync="0.04" SlowManual="0.01" FastManual="0.02" Maximum="0.2"/>
+			<PositionAreaControl Enable="false"/>
 			<TargetPosControl Range="0.008"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
@@ -1566,7 +1567,7 @@ External Setpoint Generation:
 		</Drive>
 		<Controller Name="Ctrl" CtrType="1">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Enable="false" Range="0.01"/>
+				<PosDiffControl Range="0.01"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
@@ -1587,7 +1588,7 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL7031)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7031_00_09">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving negative" Size="1" OffsA="5"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving positive" Size="1" OffsA="4"/>

@@ -1568,7 +1568,7 @@ External Setpoint Generation:
 		</Drive>
 		<Controller Name="Ctrl" CtrType="1">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Enable="false" Range="0.01"/>
+				<PosDiffControl Range="0.01"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
@@ -1589,7 +1589,7 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 9 (EL7031)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7031_00_08">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving negative" Size="1" OffsA="5"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving positive" Size="1" OffsA="4"/>

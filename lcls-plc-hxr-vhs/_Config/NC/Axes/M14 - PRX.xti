@@ -1429,6 +1429,7 @@ External Setpoint Generation:
 		<AxisPara>
 			<Dynamic AccelerationMaximum="6000" DecelerationMaximum="6000" Acceleration="44.6865" Deceleration="44.6865" Jerk="134.0595"/>
 			<Velo RefSearch="0.29791" RefSync="0.29791" SlowManual="0.05" FastManual="0.3" Fast="29.791" Maximum="29.791"/>
+			<PositionAreaControl Enable="false"/>
 			<TargetPosControl Range="0.2"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
@@ -1569,7 +1570,7 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7062_00_18">
 				<Link VarA="Drive^Inputs^In^nDataIn1" VarB="DRV Following error actual value Channel 1^Following error actual value"/>
 				<Link VarA="Drive^Inputs^In^nDataIn3[0]" VarB="DRV Torque actual value Channel 1^Torque actual value"/>
 				<Link VarA="Drive^Inputs^In^nDcOutputTime" VarB="InfoData^DcOutputShift"/>

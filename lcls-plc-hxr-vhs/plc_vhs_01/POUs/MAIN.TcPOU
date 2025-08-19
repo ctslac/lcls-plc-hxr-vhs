@@ -1,164 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MAIN" Id="{d80e7488-e2f9-48bc-8b5c-5fd54b35405a}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM Main
+    <Declaration><![CDATA[
+PROGRAM Main
 VAR
-    // Von Hamos
-    fb_com_rot : FB_MotionStage;
-    fb_cr1_move: FB_MotionStage;
-    fb_cr2_move: FB_MotionStage;
-    fb_cr3_move: FB_MotionStage;
-    fb_cr4_move: FB_MotionStage;
-    fb_cr1_rot: FB_MotionStage;
-    fb_cr2_rot: FB_MotionStage;
-    fb_cr3_rot: FB_MotionStage;
-    fb_cr4_rot: FB_MotionStage;
-    fb_cr1_tilt: FB_MotionStage;
-    fb_cr2_tilt: FB_MotionStage;
-    fb_cr3_tilt: FB_MotionStage;
-    fb_cr4_tilt: FB_MotionStage;
-    fb_parker_x: FB_MotionStage;
-    fb_parker_y: FB_MotionStage;
-    // small von Hamos - 15 Axes
+    // Von Hamos - 15 Axes
+    fb_com_rot  : FB_MotionStage;
+    fb_cr1_move : FB_MotionStage;
+    fb_cr2_move : FB_MotionStage;
+    fb_cr3_move : FB_MotionStage;
+    fb_cr4_move : FB_MotionStage;
+    fb_cr1_rot  : FB_MotionStage;
+    fb_cr2_rot  : FB_MotionStage;
+    fb_cr3_rot  : FB_MotionStage;
+    fb_cr4_rot  : FB_MotionStage;
+    fb_cr1_tilt : FB_MotionStage;
+    fb_cr2_tilt : FB_MotionStage;
+    fb_cr3_tilt : FB_MotionStage;
+    fb_cr4_tilt : FB_MotionStage;
+    fb_parker_x : FB_MotionStage;
+    fb_parker_y : FB_MotionStage;
 
     // Axis 1 - Common Rotation
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CR'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL7031)^STM Status^Status^Digital input 1:
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL7031)^STM Status^Status^Digital input 1:
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL7031_00_02]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable := TIIB[EL7031_00_02]^STM Status^Status^Digital input 2'}
     M1: ST_MotionStage := (sName := 'HXR:VHS:MMS:CR');
 
-   // Axis 2 - CR1 Move
+       // Axis 2 - CR1 Move
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM1'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 3;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 4;
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4'}
     M2: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM1');
 
-// Axis 3 - CR2 MOVE
+    // Axis 3 - CR2 MOVE
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM2'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 5;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 6;
-                              .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6'}
     M3: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM2');
 
-// Axis 4 - CR3 MOVE
+    // Axis 4 - CR3 MOVE
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM3'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 7;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 8;
-                                   .nRawEncoderUINT :=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8'}
     M4: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM3');
 
     // Axis 5 - CR4 Move
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM4'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 9;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 10;
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10'}
     M5: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM4');
 
-// Axis 6 - CR1 Rotation
+    // Axis 6 - CR1 Rotation
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRR1 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 11;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 12;
-                                  .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 11;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 12'}
     M6: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRR1');
 
-// Axis 7 - CR2 Rotation
+    // Axis 7 - CR2 Rotation
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRR2 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 13;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 14;
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 9 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 13;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 14'}
     M7: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRR2');
 
-// Axis 8 - CR3 Rotation
+    // Axis 8 - CR3 Rotation
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRR3 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 15;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1429)^DIP Inputs^Input Channel 16;
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 15;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 16'}
     M8: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRR3');
 
-// Axis 9 - CR4 Rotation
+    // Axis 9 - CR4 Rotation
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRR4 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 1;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 2;
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 11 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 1;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 2'}
     M9: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRR4');
 
-// Axis 10 - CRT1 Tilt
+    // Axis 10 - CRT1 Tilt
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRT1 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 3;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 4;
-                                   .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 13 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 3;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 4'}
     M10: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRT1');
 
-// Axis 11 - CRT2 Tilt
+    // Axis 11 - CRT2 Tilt
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRT2 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 5;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 6;
-            //                  .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 14 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 5;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 6'}
     M11: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRT2');
 
-// Axis 12 - CRT3 Tilt
+    // Axis 12 - CRT3 Tilt
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRT3 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 7;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 8;
-              //                .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 15 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 7;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 8'}
     M12: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRT3');
 
-// Axis 13 - CRT4 Tilt
+    // Axis 13 - CRT4 Tilt
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRT4 '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 9;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 17 (EL1429)^DIP Inputs^Input Channel 10;
-                  //            .nRawEncoderUINT := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 16 (EL7031)^ENC Status compact^Counter value
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 9;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 10'}
     M13: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRT4');
 
-// Axis 14 - Parker X
+    // Axis 14 - Parker X
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:PRX '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)^DI Inputs Channel 1^Input 1;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)^DI Inputs Channel 1^Input 2
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 11;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 12'}
     M14: ST_MotionStage := (sName := 'HXR:VHS:MMS:PRX');
 
-// Axis 15 - Parker Y
+    // Axis 15 - Parker Y
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:PRY '}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)^DI Inputs Channel 2^Input 1;
-                              .bLimitBackwardEnable := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)^DI Inputs Channel 2^Input 2
-                                 '}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 13;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_16]^DIP Inputs^Input Channel 14'}
     M15: ST_MotionStage := (sName := 'HXR:VHS:MMS:PRY');
 
     bInit: BOOL := TRUE;
-
-
-
-  //  INT; //m3
-    bPowerSelf: BOOL;
-    fVelocity: LREAL;
-    nEnableMode: E_STAGEENABLEMODE;
-    // INT; //M4
-    nBrakeMode: E_STAGEBRAKEMODE;
-    bHardwareEnable: BOOL;
-    fHomePosition: INT;
-// INT; //m5
- lcls_twincat_motion:ST_MotionStage; //M7
-// lcls_twincat_motion:ST_MotionStage;
-// lcls_twincat_motion:ST_MotionStage;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF bInit THEN
+      <ST><![CDATA[
+IF bInit THEN
     bInit := FALSE;
 
     M1.bHardwareEnable := TRUE;

@@ -982,7 +982,7 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 	</DataTypes>
-	<Instance TmcHash="{CDE4DC43-B248-45D0-4911-0BBE213F672A}">
+	<Instance TmcHash="{E0D5E45B-E9BE-57FC-AF02-302957576934}">
 		<Vars VarGrpType="1">
 			<Name>PlcTask Inputs</Name>
 			<Var>
@@ -1705,50 +1705,6 @@ External Setpoint Generation:
 				<Comment><![CDATA[ Raw encoder IO for INT (EL5072 LVDT)]]></Comment>
 				<Type>DINT</Type>
 			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.Axis.NcToPlc</Name>
-				<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.bLimitForwardEnable</Name>
-				<Comment><![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]></Comment>
-				<Type>BOOL</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.bLimitBackwardEnable</Name>
-				<Comment><![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]></Comment>
-				<Type>BOOL</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.bHome</Name>
-				<Comment><![CDATA[ NO Home Switch: TRUE if at home]]></Comment>
-				<Type>BOOL</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.bHardwareEnable</Name>
-				<Comment><![CDATA[ NC STO Input: TRUE if ok to move]]></Comment>
-				<Type>BOOL</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.nRawEncoderULINT</Name>
-				<Comment><![CDATA[ Raw encoder IO for ULINT (Biss-C)]]></Comment>
-				<Type>ULINT</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.nRawEncoderUINT</Name>
-				<Comment><![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]></Comment>
-				<Type>UINT</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.nRawEncoderINT</Name>
-				<Comment><![CDATA[ Raw encoder IO for INT (LVDT)]]></Comment>
-				<Type>INT</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.nRawEncoderDINT</Name>
-				<Comment><![CDATA[ Raw encoder IO for INT (EL5072 LVDT)]]></Comment>
-				<Type>DINT</Type>
-			</Var>
 		</Vars>
 		<Vars VarGrpType="2" AreaNo="1">
 			<Name>PlcTask Outputs</Name>
@@ -1944,15 +1900,6 @@ External Setpoint Generation:
 			</Var>
 			<Var>
 				<Name>Main.M15.bBrakeRelease</Name>
-				<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
-				<Type>BOOL</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.Axis.PlcToNc</Name>
-				<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-			</Var>
-			<Var>
-				<Name>Main.lcls_twincat_motion.bBrakeRelease</Name>
 				<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
 				<Type>BOOL</Type>
 			</Var>
