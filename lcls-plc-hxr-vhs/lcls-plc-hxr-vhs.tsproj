@@ -30,21 +30,21 @@
 				<SvbTask Priority="8" CycleTime="100000" AmsPort="511">
 					<Name>NC-Task 1 SVB</Name>
 				</SvbTask>
-				<Axis File="M1 - CR.xti" Id="16"/>
-				<Axis File="M2 - CRM1.xti" Id="17"/>
-				<Axis File="M3 - CRM2.xti" Id="18"/>
-				<Axis File="M4 - CRM3.xti" Id="19"/>
-				<Axis File="M5 - CRM4.xti" Id="20"/>
-				<Axis File="M6 - CRR1.xti" Id="21"/>
-				<Axis File="M7 - CRR2.xti" Id="22"/>
-				<Axis File="M8 - CRR3.xti" Id="23"/>
-				<Axis File="M9 - CRR4.xti" Id="24"/>
-				<Axis File="M10 - CRT1.xti" Id="25"/>
-				<Axis File="M11 - CRT2.xti" Id="26"/>
-				<Axis File="M12 - CRT3.xti" Id="27"/>
-				<Axis File="M13 - CRT4.xti" Id="29"/>
-				<Axis File="M14 - PRX.xti" Id="28"/>
-				<Axis File="M15 - PRY.xti" Id="30"/>
+				<Axis File="M1 - CR.xti" Id="1"/>
+				<Axis File="M2 - CRM1.xti" Id="2"/>
+				<Axis File="M3 - CRM2.xti" Id="3"/>
+				<Axis File="M4 - CRM3.xti" Id="4"/>
+				<Axis File="M5 - CRM4.xti" Id="5"/>
+				<Axis File="M6 - CRR1.xti" Id="6"/>
+				<Axis File="M7 - CRR2.xti" Id="7"/>
+				<Axis File="M8 - CRR3.xti" Id="8"/>
+				<Axis File="M9 - CRR4.xti" Id="9"/>
+				<Axis File="M10 - CRT1.xti" Id="10"/>
+				<Axis File="M11 - CRT2.xti" Id="11"/>
+				<Axis File="M12 - CRT3.xti" Id="12"/>
+				<Axis File="M13 - CRT4.xti" Id="13"/>
+				<Axis File="M14 - PRX.xti" Id="14"/>
+				<Axis File="M15 - PRY.xti" Id="15"/>
 			</NC>
 		</Motion>
 		<Plc>
