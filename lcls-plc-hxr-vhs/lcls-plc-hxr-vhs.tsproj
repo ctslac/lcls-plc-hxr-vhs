@@ -2,6 +2,13 @@
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17">
 	<Project ProjectGUID="{3DD5A0A9-3B8A-4112-B032-8459E18A1C5E}" TargetNetId="172.21.148.130.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
+			<Settings MaxCpus="4" NonWinCpus="3">
+				<Cpu CpuMemorySize="#x0"/>
+				<Cpu CpuId="1" CpuMemorySize="#x0"/>
+				<Cpu CpuId="2" CpuMemorySize="#x0"/>
+				<Cpu CpuId="3" CpuMemorySize="#x0"/>
+				<IoIdleTask Affinity="#x00000008"/>
+			</Settings>
 			<Licenses>
 				<Target>
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
@@ -13,14 +20,14 @@
 				</Target>
 			</Licenses>
 			<Tasks>
-				<Task Id="5" Priority="20" CycleTime="90000" AmsPort="350" AdtTasks="true">
+				<Task Id="5" Priority="20" CycleTime="100000" AmsPort="350" Affinity="#x00000004" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
 			</Tasks>
 		</System>
 		<Motion>
 			<NC>
-				<SafTask Priority="4" CycleTime="20000" AmsPort="501" IoAtBegin="true" SafTaskInfo="256" HighPrioAds="true">
+				<SafTask Priority="4" CycleTime="20000" AmsPort="501" Affinity="#x00000002" IoAtBegin="true" SafTaskInfo="256" HighPrioAds="true">
 					<Name>NC-Task 1 SAF</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
@@ -32,7 +39,7 @@
 						<Name>Image</Name>
 					</Image>
 				</SafTask>
-				<SvbTask Priority="8" CycleTime="100000" AmsPort="511">
+				<SvbTask Priority="8" CycleTime="100000" AmsPort="511" Affinity="#x00000002">
 					<Name>NC-Task 1 SVB</Name>
 				</SvbTask>
 				<Axis File="M1 - CR.xti" Id="1"/>
@@ -54,6 +61,7 @@
 		</Motion>
 		<Plc>
 			<Project File="plc_vhs_01.xti"/>
+			<PlcAuxTask Affinity="#x00000008"/>
 		</Plc>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
