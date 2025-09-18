@@ -10,7 +10,7 @@
     <RootNamespace>TwinCAT Drive Manager 2</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Term 19 %28EL7062%29.tcdmdrv">
+    <Content Include="EL7062_00_18.tcdmdrv">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

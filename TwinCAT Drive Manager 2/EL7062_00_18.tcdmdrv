@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TreeItem>
-  <ItemName>Term 19 (EL7062)</ItemName>
-  <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)</PathName>
+  <ItemName>EL7062_00_18</ItemName>
+  <PathName>TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7062_00_18</PathName>
   <ItemType>5</ItemType>
   <ItemId>36</ItemId>
   <ObjectId>#x03020024</ObjectId>
@@ -16,12 +16,12 @@
       <DriveModuleType>4</DriveModuleType>
       <TcLink ProtocalType="11">
         <TcPrjPath>..\lcls-plc-hxr-vhs\lcls-plc-hxr-vhs.tsproj</TcPrjPath>
-        <IoItemPathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)</IoItemPathName>
+        <IoItemPathName>TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7062_00_18</IoItemPathName>
         <ItemId>36</ItemId>
         <ObjectId>#x03020024</ObjectId>
       </TcLink>
       <OrderCode>EL7062</OrderCode>
-      <Name>Term 19 (EL7062)</Name>
+      <Name>EL7062_00_18</Name>
       <ProductRevision>EL7062-0000-0016</ProductRevision>
       <Inverter>
         <Device>
@@ -43,7 +43,7 @@
         <Channel ChnId="0">
           <TcLink>
             <TcPrjPath>..\lcls-plc-hxr-vhs\lcls-plc-hxr-vhs.tsproj</TcPrjPath>
-            <IoItemPathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)</IoItemPathName>
+            <IoItemPathName>TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7062_00_18</IoItemPathName>
             <NcItemPathName AxisType="1">TINC^NC-Task 1 SAF^Axes^M14 - PRX</NcItemPathName>
           </TcLink>
           <SelectedModifyOptPDOsMode>0</SelectedModifyOptPDOsMode>
@@ -396,7 +396,7 @@
         <Channel ChnId="1">
           <TcLink>
             <TcPrjPath>..\lcls-plc-hxr-vhs\lcls-plc-hxr-vhs.tsproj</TcPrjPath>
-            <IoItemPathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 19 (EL7062)</IoItemPathName>
+            <IoItemPathName>TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7062_00_18</IoItemPathName>
             <NcItemPathName AxisType="1">TINC^NC-Task 1 SAF^Axes^M15 - PRY</NcItemPathName>
           </TcLink>
           <SelectedModifyOptPDOsMode>0</SelectedModifyOptPDOsMode>
@@ -660,7 +660,7 @@
               </Parameter>
               <Parameter>
                 <PropertyName>GearRatioMotorSide</PropertyName>
-                <Value>1</Value>
+                <Value>50</Value>
               </Parameter>
               <Parameter>
                 <PropertyName>GearRatioLoadSide</PropertyName>
@@ -759,7 +759,7 @@
   <EtherCAT>
     <Slave>
       <Info>
-        <Name><![CDATA[Term 19 (EL7062)]]></Name>
+        <Name><![CDATA[EL7062_00_18]]></Name>
         <PhysAddr>1018</PhysAddr>
         <AutoIncAddr>65519</AutoIncAddr>
         <Physics>KK</Physics>
