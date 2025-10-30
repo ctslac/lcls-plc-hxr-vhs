@@ -1427,14 +1427,14 @@ External Setpoint Generation:
 	<Axis Id="7" CreateSymbols="true" AxisType="1" GroupId="22">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<Dynamic AccelerationMaximum="20" DecelerationMaximum="20" Acceleration="20" Deceleration="20" Jerk="200"/>
-			<Velo RefSearch="0.04" RefSync="0.04" SlowManual="0.01" FastManual="0.02" Maximum="0.2"/>
+			<Dynamic AccelerationMaximum="2000" DecelerationMaximum="2000" Acceleration="2000" Deceleration="2000" Jerk="20000"/>
+			<Velo RefSearch="0.04" RefSync="0.04" SlowManual="0.01" FastManual="0.02" Maximum="20"/>
 			<PositionAreaControl Enable="false"/>
 			<TargetPosControl Range="0.008"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
-			<EncPara MaxCount="#x0000ffff">
+			<EncPara ScaleFactorNumerator="0.0003125" Inverse="true" MaxCount="#x0000ffff">
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
@@ -1494,8 +1494,8 @@ External Setpoint Generation:
 			</Vars>
 		</Encoder>
 		<Drive Name="Drive" DrvType="24">
-			<DrvPara>
-				<Analog VeloReferenz="4" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
+			<DrvPara Inverse="true">
+				<Analog VeloReferenz="20" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
 			</DrvPara>
 			<Vars VarGrpType="1">
@@ -1567,7 +1567,8 @@ External Setpoint Generation:
 		</Drive>
 		<Controller Name="Ctrl" CtrType="1">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Range="0.01"/>
+				<PosDiffControl Range="0.1"/>
+				<PID PosKp="0"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
 		</Controller>
