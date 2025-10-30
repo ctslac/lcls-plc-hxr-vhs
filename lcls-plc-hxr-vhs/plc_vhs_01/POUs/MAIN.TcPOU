@@ -29,26 +29,26 @@ VAR
 
     // Axis 2 - CR1 Move
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM1'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3'}
     M2: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM1');
 
     // Axis 3 - CR2 MOVE
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM2'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5'}
     M3: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM2');
 
     // Axis 4 - CR3 MOVE
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM3'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7'}
     M4: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM3');
 
     // Axis 5 - CR4 Move
     {attribute 'pytmc' := 'pv: HXR:VHS:MMS:CRM4'}
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9'}
     M5: ST_MotionStage := (sName := 'HXR:VHS:MMS:CRM4');
 
     // Axis 6 - CR1 Rotation

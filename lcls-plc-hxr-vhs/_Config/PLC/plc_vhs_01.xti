@@ -983,7 +983,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{63087C16-64A3-45B8-A3FE-105DDD7C0409}" Name="plc_vhs_01" PrjFilePath="..\..\plc_vhs_01\plc_vhs_01.plcproj" TmcFilePath="..\..\plc_vhs_01\plc_vhs_01.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{BC5A44D8-6DE3-EBFE-2811-6F78C8796353}" TmcPath="plc_vhs_01\plc_vhs_01.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{92EEDF97-83C1-95FB-4EF6-D6EC18EE32F6}" TmcPath="plc_vhs_01\plc_vhs_01.tmc">
 			<Name>plc_vhs_01 Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -1949,7 +1949,7 @@ External Setpoint Generation:
 						<OTCID>#x02010050</OTCID>
 					</ManualConfig>
 					<Priority>20</Priority>
-					<CycleTime>9000000</CycleTime>
+					<CycleTime>10000000</CycleTime>
 				</Context>
 			</Contexts>
 			<TaskPouOids>
@@ -1960,14 +1960,14 @@ External Setpoint Generation:
 	<Mappings>
 		<OwnerA Name="plc_vhs_01 Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL1429_00_06">
-				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 4" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 3" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 6" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 5" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 8" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 7" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 10" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 9" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 3" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 4" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 5" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 6" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 7" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 8" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 9" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 10" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 12" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 11" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 14" AutoLink="true" Size="1"/>

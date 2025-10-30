@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance2" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{BC5A44D8-6DE3-EBFE-2811-6F78C8796353}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance2" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{92EEDF97-83C1-95FB-4EF6-D6EC18EE32F6}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_System">T_AmsNetID</Name>
@@ -67713,8 +67713,8 @@ External Setpoint Generation:
           </Property>
           <Property>
             <Name>TcLinkTo</Name>
-            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4</Value>
+            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -67736,8 +67736,8 @@ External Setpoint Generation:
           </Property>
           <Property>
             <Name>TcLinkTo</Name>
-            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6</Value>
+            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -67759,8 +67759,8 @@ External Setpoint Generation:
           </Property>
           <Property>
             <Name>TcLinkTo</Name>
-            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8</Value>
+            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -67782,8 +67782,8 @@ External Setpoint Generation:
           </Property>
           <Property>
             <Name>TcLinkTo</Name>
-            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10</Value>
+            <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9</Value>
           </Property>
         </Properties>
       </SubItem>
@@ -76445,8 +76445,8 @@ External Setpoint Generation:
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4</Value>
+                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 4;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 3</Value>
               </Property>
             </Properties>
             <BitOffs>1278144704</BitOffs>
@@ -76469,8 +76469,8 @@ External Setpoint Generation:
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6</Value>
+                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 6;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 5</Value>
               </Property>
             </Properties>
             <BitOffs>1278170688</BitOffs>
@@ -76493,8 +76493,8 @@ External Setpoint Generation:
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8</Value>
+                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 8;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 7</Value>
               </Property>
             </Properties>
             <BitOffs>1278196672</BitOffs>
@@ -76517,8 +76517,8 @@ External Setpoint Generation:
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9;
-                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10</Value>
+                <Value>.bLimitForwardEnable  := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 10;
+                              .bLimitBackwardEnable := TIIB[EL1429_00_06]^DIP Inputs^Input Channel 9</Value>
               </Property>
             </Properties>
             <BitOffs>1278222656</BitOffs>
@@ -76946,7 +76946,7 @@ External Setpoint Generation:
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-08-19T09:54:04</Value>
+          <Value>2025-10-30T14:56:51</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
