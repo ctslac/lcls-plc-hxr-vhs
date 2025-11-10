@@ -1432,6 +1432,7 @@ External Setpoint Generation:
 			<PositionAreaControl Enable="false"/>
 			<TargetPosControl Range="0.01"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
+			<ParameterChanged>16</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
 			<EncPara ScaleFactorNumerator="7.8125e-05" Offset="-11.165" MaxCount="#x0000ffff">
@@ -1567,7 +1568,7 @@ External Setpoint Generation:
 		</Drive>
 		<Controller Name="Ctrl" CtrType="1">
 			<CtrPara PriorControlFactor="1">
-				<PosDiffControl Enable="false" Range="0.01"/>
+				<PosDiffControl Range="0.01"/>
 				<PID PosKp="0"/>
 				<Observer BandWidth="20"/>
 			</CtrPara>
