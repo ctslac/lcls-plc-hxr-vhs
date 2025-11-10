@@ -1991,14 +1991,6 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="DIP Inputs^Input Channel 2" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitForwardEnable" VarB="DIP Inputs^Input Channel 1" AutoLink="true" Size="1"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL7031_00_02">
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
-			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M1 - CR">
-				<Link VarA="PlcTask Inputs^Main.M1.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^Main.M1.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
-			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M10 - CRT1">
 				<Link VarA="PlcTask Inputs^Main.M10.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M10.Axis.PlcToNc" VarB="Inputs^FromPlc"/>

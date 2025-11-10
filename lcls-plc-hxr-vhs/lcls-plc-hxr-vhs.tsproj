@@ -57,6 +57,7 @@
 				<Axis File="M13 - CRT4.xti" Id="13"/>
 				<Axis File="M14 - PRX.xti" Id="14"/>
 				<Axis File="M15 - PRY.xti" Id="15"/>
+				<Axis File="Axis 16.xti" Id="16"/>
 			</NC>
 		</Motion>
 		<Plc>
